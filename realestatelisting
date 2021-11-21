@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>905 Waverley St, Palo Alto, CA</title>
+    <link href="resetcss2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+        #container{
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+        header, #thumbs{
+            background-color: beige;
+            width: 96%;
+            margin: 0 auto;
+            box-shadow: 3px 3px white;
+            text-align: center;
+        }
+        header p{
+            color: red;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            }
+        header h1{
+            font-size: 3em;    
+        }
+        header h2{
+            font-size: 2em;
+        }
+        #feature{
+            text-align: center;
+        }
+        #feature img{
+            width: 60%;
+            margin-top: 20px;
+            margin-bottom: 20px;    
+        }
+        #thumbs img{
+            width: 20%;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            opacity: 0.35;
+            box-shadow: 2px 2px #ccc;
+        }
+        
+        #thumbs img:hover{
+            opacity: 1.0;
+            transition: opacity 1s;
+            transition-delay: 1s;
+            transform: rotate(5deg);
+            transform: scale(1.15,1.15);
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const images =
+            document.getElementsTagName("img");
+            for(var x=1; x < images.length; x++) {
+                images[x].addEventListener('click',
+                function() {
+                    let loc = this.src;
+                    
+                    document.getElementById('featureImg'). src = loc;
+        });
+    }
+ }
+    </script>
+    </head>
+    <body>
+        <div id="container">
+        <header>
+            <!--Property Location Information-->
+            <p>For Sale</p>
+            <h1>905 Waverley St</h1>
+            <h2>Palo Alto, CA 94301</h2>
+            <h2>$5,580,000</h2>
+         </header>
+         <div id="feature">
+         <img id="featureImg" src="paloalto1.jpeg" width="200" />
+         </div>
+         <div id="thumbs">
+            <img src="paloalto2.jpeg" />
+            <img src="paloalto3.jpeg" />
+            <img src="paloalto4.jpeg" />
+            <img src="paloalto5.jpeg" />
+            <img src="paloalto6.jpeg" />
+            <img src="paloalto7.jpeg" />
+            <img src="paloalto8.jpeg" />
+            <img src="paloalto9.jpeg" />
+            <img src="paloalto10.jpeg" />
+            <img src="paloalto11.jpeg" />
+            <img src="paloalto12.jpeg" />
+        </div>
+    </div>
+  </body>
+</html>
